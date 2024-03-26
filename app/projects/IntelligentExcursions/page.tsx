@@ -59,7 +59,7 @@ export default class MultipleItems extends Component {
 
                             <div className='text-xl font-normal text-black bg-lightgrey px-3 pt-3 rounded-3xl'> 
                                 <h3 className='text-base font-bold text-black'>Abstract:</h3>
-                                <h3 className='text-base font-normal text-black pb-2'>Intelligent Excursions is an application which generates personalized holiday recommedations based on a user's interests, requirements and 5 keywords. We decided to implement the solution in the form of a website using the Flask Python Web Framework. The recommendations are generated using external API calls to find the best combination of accommodation and travel options for the user. Recommendations are filtered through IBM's Natural Language Processing and Tone Analyser APIs in order to determine their suitability.</h3>
+                                <h3 className='text-base font-normal text-black pb-2'>Intelligent Excursions is an application which generates personalized holiday recommedations based on a user&apos;s interests, requirements and 5 keywords. We decided to implement the solution in the form of a website using the Flask Python Web Framework. The recommendations are generated using external API calls to find the best combination of accommodation and travel options for the user. Recommendations are filtered through IBM&apos;s Natural Language Processing and Tone Analyser APIs in order to determine their suitability.</h3>
 
                             </div>
                                 <h3 className='text-xl font-bold text-black pt-10 pb-5'>Project Poster</h3>
