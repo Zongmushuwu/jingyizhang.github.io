@@ -12,6 +12,7 @@ interface DataType {
     //imgSrc: string;
     name: string;
     others: string;
+    link: string;
 }
 
 const postData: DataType[] = [
@@ -19,15 +20,17 @@ const postData: DataType[] = [
         heading: 'Supporting Co-Presence in Virtual Environments by Actor Control of Multiple Avatars',
         name: "Master - Thesis",
         date: 'Apr 2022 - Sep 2022',
-        others: 'Supervisor: Prof Anthony Steed'
+        others: 'Supervisor: Prof Anthony Steed',
+        link: '/projects/MasterThesis',
         //imgSrc: '',
     },
     {
       heading: 'AlienWere - VR Game',
       name: "Master - Group Coursework",
       date: 'Jan 2022 - Mar 2022',
-      others: 'Group member: Jingyi Zhang, Yuer Qiu, Ziheng Yin, Xiaohan Meng'
+      others: 'Group member: Jingyi Zhang, Yuer Qiu, Ziheng Yin, Xiaohan Meng',
       //imgSrc: '',
+      link:'/projects/AlienWere'
   },
     {
         heading: 'Removal of Artifacts in Digitised Medical Optical Microscopy',
@@ -35,6 +38,7 @@ const postData: DataType[] = [
         date: 'Oct 2020 - Apr 2021',
         //imgSrc: '',
         others: 'Supervisor: Prof Delmiro Fernandez-Reyes',
+        link:'/projects/UndergradThesis'
     },
     {
       heading: 'UCL-IXN + IBM: Intelligent Excursions',
@@ -42,6 +46,7 @@ const postData: DataType[] = [
       date: 'Jan 2018 - Jan 2019',
       //imgSrc: '',
       others: 'Group member: Jingyi Zhang, Zahra Essa, Ping Liu',
+      link:'/projects/IntelligentExcursions'
   },
 
     // {
@@ -131,7 +136,7 @@ export default class MultipleItems extends Component {
                         {postData.map((items, i) => (
                             <div key={i}  >
                               
-                                <Link href= '/' >
+                                <Link href= {items.link} >
                                   <div className='link-img :hover rounded-3xl m-3'>
                                     <div className='bg-white px-3 pt-3 pb-3 my-10 rounded-3xl relative'>
                                         {/* <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="inline-block m-auto" /> */}

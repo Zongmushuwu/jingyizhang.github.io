@@ -9,9 +9,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Project', href: '../../projects', current: false },
-    { name: 'Publication', href: '../../publications', current: false },
-    { name: 'CV', href: 'JingyiZhang_CV_academic.pdf', current: false },
+    { name: 'Projects', href: '../../projects', current: false },
+    { name: 'Publications', href: '../../publications', current: false },
+    { name: 'CV', href: '../../cv', current: false },
 ]
 
 function classNames(...classes: string[]) {
