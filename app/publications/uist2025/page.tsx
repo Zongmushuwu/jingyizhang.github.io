@@ -62,7 +62,7 @@ export default function UIST2025() {
                         />
                     </div>
                     <p className="text-left text-sm text-gray-600 mt-4 leading-relaxed">
-                        Illustration of our system for bringing live pedestrians from the real world into the virtual environment; Left: AR — The AR user is on-site, controlling a virtual avatar through an AR headset. They can view the VR user's virtual representation as well as the real pedestrians moving around them in the physical environment. Right: VR — The VR user is remote, controlling a virtual avatar through a VR headset. They can see the AR user's virtual representative and virtual pedestrians, which correspond to real pedestrians in the same physical location, moving in real-time just as they do in the real world.
+                        Illustration of our system for bringing live pedestrians from the real world into the virtual environment; Left: AR — The AR user is on-site, controlling a virtual avatar through an AR headset. They can view the VR user&apos;s virtual representation as well as the real pedestrians moving around them in the physical environment. Right: VR — The VR user is remote, controlling a virtual avatar through a VR headset. They can see the AR user&apos;s virtual representative and virtual pedestrians, which correspond to real pedestrians in the same physical location, moving in real-time just as they do in the real world.
                     </p>
                 </div>
 
