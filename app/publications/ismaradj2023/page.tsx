@@ -27,6 +27,12 @@ export default function ISMARAdj2023() {
                             Reviving the Euston Arch: A Mixed Reality Approach to Cultural Heritage Tours
                         </h1>
                         
+                        <div className="mb-4">
+                            <p className="text-lg font-medium" style={{color: '#ca8a04'}}>
+                                Honorable Mention for Best Design Award at ISMAR 2023 Student Competition
+                            </p>
+                        </div>
+                        
                         <div className="space-y-3 mb-6">
                             <p className="text-lg font-normal">
                                 <span style={{color: '#898989'}}>Ziwen Lu</span>, <span className="font-bold" style={{color: '#898989'}}>Jingyi Zhang</span>, <span style={{color: '#898989'}}>Kalila Shapiro</span>, <span style={{color: '#898989'}}>Nels Numan</span>, <span style={{color: '#898989'}}>Simon Julier</span>, <span style={{color: '#898989'}}>Anthony Steed</span>

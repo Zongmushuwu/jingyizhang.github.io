@@ -45,7 +45,7 @@ const postData: DataType[] = [
     },
     {
         heading: 'Supporting Co-Presence in Populated Virtual Environments by Actor Takeover of Animated Characters',
-        venue: "2023 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+        venue: "2023 IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2023)",
         date: 'Oct 23',
         imgSrc: '/images/publication/welcome page/ismar23.png',
         author: 'Jingyi Zhang, Klara Brandstätter, Anthony Steed',
