@@ -1,11 +1,13 @@
 import './globals.css';
 import Navbar from './components/Navbar/index';
 import Footer from './components/Footer/index';
-import Head from 'next/head';
 
 export const metadata = {
   title: 'JingyiZhang',
   description: '',
+  icons: {
+    icon: '/images/dedicated/Profile.jpg',
+  },
 }
 
 export default function RootLayout({
@@ -15,7 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head><link rel="shortcut icon" href="/favicon.ico" /></Head>
       <body>
         <Navbar />
         {children}
