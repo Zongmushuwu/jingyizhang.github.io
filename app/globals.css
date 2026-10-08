@@ -395,3 +395,72 @@ html {
 .link-img:hover{
   box-shadow: 5px 5px 5px rgba(7, 7, 7, 0.1);
 }
+
+/* Homepage news */
+.news-scroll {
+  max-height: 208px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d6 transparent;
+}
+
+.news-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 6px;
+}
+
+.news-link {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 16px;
+  min-height: 56px;
+  padding: 9px 12px 9px 0;
+  border-radius: 4px;
+}
+
+.news-link:hover {
+  background-color: #fafafa;
+}
+
+.news-link:focus-visible,
+.news-scroll:focus-visible {
+  outline: 2px solid #0066ff;
+  outline-offset: -2px;
+}
+
+.news-date {
+  color: #909090;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.news-copy {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 639px) {
+  .news-link {
+    grid-template-columns: 66px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .news-date {
+    font-size: 12px;
+  }
+
+  .news-copy {
+    font-size: 15px;
+  }
+}

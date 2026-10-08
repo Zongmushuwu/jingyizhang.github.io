@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { submissions } from "../data/submissions";
+import { researchInterests } from "../data/profile";
 
 const CV = () => {
     return (
@@ -20,6 +22,13 @@ const CV = () => {
                 <p className="text-lg mt-2" style={{color: '#7F7F7F'}}>jy.zhang@ucl.ac.uk | <Link href="/" className="group inline-flex items-baseline" target="_blank" rel="noopener noreferrer"><svg className="w-4 h-4 mr-1 text-yellow-600" style={{color: '#ca8a04'}} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path></svg><span className="group-hover:text-yellow-600 group-hover:underline">jingyizhang.com</span></Link> | <Link href="https://linkedin.com/in/jingyi-zhang-1045161a9" className="group inline-flex items-baseline" target="_blank" rel="noopener noreferrer"><svg className="w-4 h-4 mr-1 text-yellow-600" style={{color: '#ca8a04'}} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path></svg><span className="group-hover:text-yellow-600 group-hover:underline">linkedin.com/in/jingyi-zhang-1045161a9</span></Link></p>
             </div>
 
+            {/* Research Interests Section */}
+            <div className="mb-12">
+                <h2 id="cv-research-interests" className="text-2xl font-bold text-gray-900 mb-6">Research Interests</h2>
+                <div className="border-b border-gray-200 mb-6"></div>
+                <p className="font-light" style={{color: '#7F7F7F'}}>{researchInterests}</p>
+            </div>
+
             {/* Education Section */}
             <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Education</h2>
@@ -27,13 +36,13 @@ const CV = () => {
                 
                 <div className="mb-6">
                     <div className="mb-2">
-                        <div className="flex items-center gap-2 justify-between">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                             <h3 className="text-lg font-semibold text-gray-900">PhD Computer Science <span style={{color: '#7F7F7F'}}>| University College London</span></h3>
-                            <p className="font-medium whitespace-nowrap" style={{color: '#000000'}}>04/2023 - now</p>
+                            <p className="font-medium whitespace-nowrap" style={{color: '#000000'}}>04/2023 - 05/2027 (expected)</p>
                         </div>
                     </div>
                     <div>
-                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-normal">Supervisors:</span> <span className="font-light">Prof. Anthony Steed, Prof. Ifat Yasin</span></p>
+                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-normal">Supervisors:</span> <span className="font-light">Prof. Anthony Steed (Deputy Head, Department of Computer Science), Prof. Ifat Yasin (Vice-Dean – Equality, Diversity and Inclusion, Faculty of Engineering)</span></p>
                     </div>
                 </div>
 
@@ -75,7 +84,7 @@ const CV = () => {
 
             {/* Work Experience Section */}
             <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Work Experience</h2>
+                <h2 id="cv-work-experience" className="text-2xl font-bold text-gray-900 mb-6">Work Experience</h2>
                 <div className="border-b border-gray-200 mb-6"></div>
                 
                 <div className="mb-6">
@@ -85,11 +94,12 @@ const CV = () => {
                             <p className="font-medium whitespace-nowrap" style={{color: '#000000'}}>09/2023 - now</p>
                         </div>
                     </div>
-                    <div>
-                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• COMP0016 System Engineering - Coursework marking, student project management.</span></p>
-                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• COMP0113 Virtual Environment - Coursework marking, lab tutorial (Unity, Ubiq, C#).</span></p>
-                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• COMP0026 Image Processing - Coursework Marking, lab Q&A.</span></p>
-                    </div>
+                    <ul className="list-disc pl-5 space-y-2 font-light leading-6" style={{color: '#7F7F7F'}}>
+                        <li><span className="font-normal">COMP0016 Systems Engineering (Undergraduate):</span> Guided student teams in project management and provided Q&A support; coursework marking.</li>
+                        <li><span className="font-normal">COMP0113 Virtual Environments (Master’s):</span> Delivered tutorials on Unity, C# programming, deploying VR applications to headsets, and networked VR development with Ubiq; lab Q&A; seminar and coursework marking.</li>
+                        <li><span className="font-normal">COMP0026 Image Processing (Master’s):</span> Lab Q&A and coursework marking.</li>
+                        <li><span className="font-normal">COMP0122 MSc Computer Graphics, Vision and Imaging Project:</span> Assisted faculty supervisors with the supervision of MSc dissertation projects.</li>
+                    </ul>
                 </div>
 
                 <div className="mb-6">
@@ -141,19 +151,60 @@ const CV = () => {
                         </div>
                     </div>
                     <div>
-                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• Responsible for AI Ecosystem info collection.</span></p>
+                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• Conducted research on the AI ecosystem and contributed to industry reports.</span></p>
                         <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• Project matchmaking with AI startup companies.</span></p>
-                        <p className="mb-1" style={{color: '#7F7F7F'}}><span className="font-light">• Wrote Wechat Official Account articles.</span></p>
                     </div>
                 </div>
             </div>
 
             {/* Publications Section */}
             <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Publications</h2>
+                <h2 id="cv-publications" className="text-2xl font-bold text-gray-900 mb-4">Publications</h2>
                 <div className="border-b border-gray-200 mb-6"></div>
                 
                 <div className="space-y-6">
+                    {/* Journal of Sport and Health Science — under review */}
+                    <div className="mb-6">
+                        <div className="flex justify-between items-start">
+                            <div className="flex-1 pr-4">
+                                <Link href="https://www.sciencedirect.com/journal/journal-of-sport-and-health-science" className="block group" target="_blank" rel="noopener noreferrer">
+                                    <span className="text-yellow-600 font-medium mr-2" style={{color: '#ca8a04'}}>
+                                        <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path></svg>
+                                    </span>
+                                    <h3 className="text-lg font-semibold text-gray-900 mb-2 inline group-hover:text-yellow-600 group-hover:underline" style={{color: '#000000'}}>Head-Mounted Augmented Reality Enhances Affective and Perceptual Responses to Vigorous Intermittent Lifestyle Physical Activity</h3>
+                                </Link>
+                                <p className="text-sm mb-1" style={{color: '#7F7F7F'}}><span className="font-light italic">Journal of Sport and Health Science</span></p>
+                                <p className="text-base mb-1" style={{color: '#7F7F7F'}}><span className="font-light">Jonathan M. Bird, Henry W. W. Potts, Harold Kwong, <strong>Jingyi Zhang</strong>, John J. Mitchell, Aidan Acquah, Joanna M. Blodgett, Abigail Fisher, Anthony Steed, Nikos Ntoumanis, Mark Hamer</span></p>
+                            </div>
+                            <p className="font-medium whitespace-nowrap flex-shrink-0" style={{color: '#000000'}}>Under review</p>
+                        </div>
+                    </div>
+                    {submissions.map((publication) => (
+                        <div className="mb-6" key={publication.slug}>
+                            <div className="flex justify-between items-start">
+                                <div className="flex-1 pr-4">
+                                    <Link href={`/publications/${publication.slug}`} className="block group" target="_blank" rel="noopener noreferrer">
+                                        <span className="text-yellow-600 font-medium mr-2" style={{color: '#ca8a04'}}>
+                                            <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path></svg>
+                                        </span>
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-2 inline group-hover:text-yellow-600 group-hover:underline" style={{color: '#000000'}}>{publication.title}</h3>
+                                    </Link>
+                                    <p className="text-sm mb-1" style={{color: '#7F7F7F'}}><span className="font-light italic">{publication.venue}</span></p>
+                                    <p className="text-base mb-1" style={{color: '#7F7F7F'}}>
+                                        <span className="font-light">
+                                            {publication.authors.map((author, index) => (
+                                                <React.Fragment key={author}>
+                                                    {index > 0 && ", "}
+                                                    {author === "Jingyi Zhang" ? <strong>{author}</strong> : author}
+                                                </React.Fragment>
+                                            ))}
+                                        </span>
+                                    </p>
+                                </div>
+                                <p className="font-medium whitespace-nowrap flex-shrink-0" style={{color: '#000000'}}>Under review</p>
+                            </div>
+                        </div>
+                    ))}
                     {/* UIST 2025 */}
                     <div className="mb-6">
                         <div className="flex justify-between items-start">
@@ -188,23 +239,6 @@ const CV = () => {
                         </div>
                     </div>
 
-                    {/* ISMAR-Adjunct 2023 */}
-                    <div className="mb-6">
-                        <div className="flex justify-between items-start">
-                            <div className="flex-1 pr-4">
-                                <Link href="/publications/ismaradj2023" className="block group" target="_blank" rel="noopener noreferrer">
-                                    <span className="text-yellow-600 font-medium mr-2" style={{color: '#ca8a04'}}>
-                                        <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path></svg>
-                                    </span>
-                                    <h3 className="text-lg font-semibold text-gray-900 mb-2 inline group-hover:text-yellow-600 group-hover:underline" style={{color: '#000000'}}>Reviving the Euston Arch: A Mixed Reality Approach to Cultural Heritage Tours</h3>
-                                </Link>
-                                <p className="text-sm mb-1" style={{color: '#7F7F7F'}}><span className="font-light italic">2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct 2023)</span></p>
-                                <p className="text-base mb-1" style={{color: '#7F7F7F'}}><span className="font-light">Ziwen Lu, <strong>Jingyi Zhang</strong>, Kalila Shapiro, Nels Numan, Simon Julier, Anthony Steed</span></p>
-                            </div>
-                            <p className="font-medium whitespace-nowrap flex-shrink-0" style={{color: '#000000'}}>Oct 2023</p>
-                        </div>
-                    </div>
-
                     {/* ISMAR 2023 */}
                     <div className="mb-6">
                         <div className="flex justify-between items-start">
@@ -217,6 +251,23 @@ const CV = () => {
                                 </Link>
                                 <p className="text-sm mb-1" style={{color: '#7F7F7F'}}><span className="font-light italic">2023 IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2023)</span></p>
                                 <p className="text-base mb-1" style={{color: '#7F7F7F'}}><span className="font-light"><strong>Jingyi Zhang</strong>, Klara Brandstätter, Anthony Steed</span></p>
+                            </div>
+                            <p className="font-medium whitespace-nowrap flex-shrink-0" style={{color: '#000000'}}>Oct 2023</p>
+                        </div>
+                    </div>
+
+                    {/* ISMAR-Adjunct 2023 */}
+                    <div className="mb-6">
+                        <div className="flex justify-between items-start">
+                            <div className="flex-1 pr-4">
+                                <Link href="/publications/ismaradj2023" className="block group" target="_blank" rel="noopener noreferrer">
+                                    <span className="text-yellow-600 font-medium mr-2" style={{color: '#ca8a04'}}>
+                                        <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path></svg>
+                                    </span>
+                                    <h3 className="text-lg font-semibold text-gray-900 mb-2 inline group-hover:text-yellow-600 group-hover:underline" style={{color: '#000000'}}>Reviving the Euston Arch: A Mixed Reality Approach to Cultural Heritage Tours</h3>
+                                </Link>
+                                <p className="text-sm mb-1" style={{color: '#7F7F7F'}}><span className="font-light italic">2023 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct 2023)</span></p>
+                                <p className="text-base mb-1" style={{color: '#7F7F7F'}}><span className="font-light">Ziwen Lu, <strong>Jingyi Zhang</strong>, Kalila Shapiro, Nels Numan, Simon Julier, Anthony Steed</span></p>
                             </div>
                             <p className="font-medium whitespace-nowrap flex-shrink-0" style={{color: '#000000'}}>Oct 2023</p>
                         </div>
@@ -256,6 +307,16 @@ const CV = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Academic Service & Memberships Section */}
+            <div className="mb-12">
+                <h2 id="cv-academic-service" className="text-2xl font-bold text-gray-900 mb-4">Academic Service & Memberships</h2>
+                <div className="border-b border-gray-200 mb-6"></div>
+                <ul className="list-disc pl-5 space-y-2 font-light leading-6" style={{color: '#7F7F7F'}}>
+                    <li><span className="font-normal">Professional memberships:</span> Member of ACM and IEEE.</li>
+                    <li><span className="font-normal">Peer review:</span> Reviewer for ACM SIGCHI conferences, IEEE VR, and IEEE ISMAR.</li>
+                </ul>
             </div>
 
             {/* Awards & Scholarship Section */}
